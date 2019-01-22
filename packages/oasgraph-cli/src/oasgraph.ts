@@ -2,7 +2,7 @@
 
 import * as express from 'express'
 import * as graphqlHTTP from 'express-graphql'
-import { createGraphQlSchema } from 'oasgraph'
+import { createGraphQlSchema } from 'oasgraph-auth'
 import * as path from 'path'
 import * as request from 'request'
 import * as fs from 'fs'

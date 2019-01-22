@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const graphqlHTTP = require("express-graphql");
-const oasgraph_1 = require("oasgraph");
+const oasgraph_auth_1 = require("oasgraph-auth");
 const path = require("path");
 const request = require("request");
 const fs = require("fs");
@@ -107,7 +107,7 @@ function getRemoteFileSpec(uri) {
  */
 function startGraphQLServer(oas, port) {
     // Create GraphQL interface
-    oasgraph_1.createGraphQlSchema(oas, {
+    oasgraph_auth_1.createGraphQlSchema(oas, {
         strict: program.strict,
         viewer: program.viewer,
         addSubOperations: program.addSubOperations,
