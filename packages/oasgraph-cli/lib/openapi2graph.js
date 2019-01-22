@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const graphqlHTTP = require("express-graphql");
-const oasgraph_auth_1 = require("oasgraph-auth");
+const openapi2graph_1 = require("openapi2graph");
 const path = require("path");
 const request = require("request");
 const fs = require("fs");
@@ -107,7 +107,7 @@ function getRemoteFileSpec(uri) {
  */
 function startGraphQLServer(oas, port) {
     // Create GraphQL interface
-    oasgraph_auth_1.createGraphQlSchema(oas, {
+    openapi2graph_1.createGraphQlSchema(oas, {
         strict: program.strict,
         viewer: program.viewer,
         addSubOperations: program.addSubOperations,
@@ -146,4 +146,4 @@ function writeSchema(schema) {
         console.log(`OASGraph successfully saved your schema at ${program.save}`);
     });
 }
-//# sourceMappingURL=oasgraph.js.map
+//# sourceMappingURL=openapi2graph.js.map
