@@ -66,7 +66,7 @@ export function getResolver ({
   let baseUrl = Oas3Tools.getBaseUrl(oas, operation)
 
   // return resolve function:
-  return (root: any, args, ctx = {}) => {
+  return (root: any, args, ctx: any = {}) => {
     // fetch possibly existing _oasgraph
     // NOTE: _oasgraph is an object used to pass security information
     let _oasgraph: any = {}
@@ -155,7 +155,8 @@ export function getResolver ({
     // NOTE: This may cause the use to encounter unexpected changes
     headers['content-type'] = typeof(operation.payloadContentType) !== 'undefined' ? operation.payloadContentType : 'application/json'
     headers['accept'] = typeof(operation.responseContentType) !== 'undefined' ? operation.responseContentType : 'application/json'
-
+    if(ctx.headers.authorization)
+      headers['authorization'] = ctx.headers.authorization
     let options: RequestOptions = {
       method: operation.method,
       url: url,
