@@ -1,6 +1,6 @@
 {
-  "name": "oasgraph-auth-cli",
-  "version": "0.3.0",
+  "name": "openapi2graph-cli",
+  "version": "0.3.1",
   "description": "CLI for turning APIs described by OpenAPI Specifications (OAS) into GraphQL interfaces",
   "copyright.owner": "IBM Corp.",
   "contributors": [
@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/strongloop/oasgraph.git"
+    "url": "https://github.com/johanpedroo/oasgraph.git"
   },
-  "homepage": "https://github.com/strongloop/oasgraph/blob/master/README.md",
+  "homepage": "https://github.com/johanpedroo/oasgraph/blob/master/README.md",
   "keywords": [
     "ibm",
     "strongloop",
@@ -48,7 +48,7 @@
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2",
     "js-yaml": "^3.12.0",
-    "oasgraph-auth": "^0.13.0",
+    "openapi2graph": "^0.13.0",
     "request": "^2.88.0"
   },
   "devDependencies": {
