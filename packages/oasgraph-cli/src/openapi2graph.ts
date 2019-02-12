@@ -117,7 +117,6 @@ function startGraphQLServer(oas, port) {
     fillEmptyResponses: program.fillEmptyResponses
   }) 
      .then(({schema, report}) => {
-      console.log(JSON.stringify(report, null, 2))
 
       // save local file if required 
       if (program.save) {
